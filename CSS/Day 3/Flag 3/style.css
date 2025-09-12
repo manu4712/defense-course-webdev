@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    background-color: #242E63;
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+
+.first,.third{
+    background-color: #CC003A;
+    width: 100%;
+    height: 50px;
+}
+
+.third{
+    position: absolute;
+    bottom: 0;
+}
+
+.second{
+    height: 80px;
+    width: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 110px;
+}

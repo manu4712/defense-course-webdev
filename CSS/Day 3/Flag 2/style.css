@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    background-color: #FED600;
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+
+.first,.third{
+    height: 80px;
+    width: 80px;
+    background-color: #005C98;
+}
+
+.third{
+    position: absolute;
+    bottom: 0px;
+}
+
+.second,.fourth{
+    background-color: #005C98;
+    width: 180px;
+    height: 80px;
+}
+
+.second{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.fourth{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
