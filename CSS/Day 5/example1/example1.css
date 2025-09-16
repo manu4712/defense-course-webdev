@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header {
+  grid-column: 1/4;
+  background-color: #8670e0;
+}
+
+.SideBar {
+  grid-row: 2/4;
+  background-color: #93ce3f;
+}
+
+.Content-1 {
+  grid-column: 2/4;
+  background-color: #2fb4ae;
+}
+
+.Content-2,
+.Content-3 {
+  background-color: #2fb4ae;
+}
+
+.Footer {
+  grid-column: 1/4;
+  background-color: #8670e0;
+}
