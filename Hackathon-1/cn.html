@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 — Computer Networks</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Learn the fundamentals of computer networks</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>Day 1 — Computer Networks (CN)</h2>
+
+        <h3>Understanding how the internet works from first principles</h3>
+
+        <p>The internet is not magic—it's a series of logical solutions to fundamental problems of sharing information
+            between computers across the world.</p>
+
+        <h2>How the Internet Works</h2>
+
+        <p>The internet evolved through solving five core problems, each building on the previous solution.</p>
+
+        <h3>Principle 1: The Need to Share Information</h3>
+
+        <p>The fundamental challenge is moving information from Computer A to Computer B when they're not in the same
+            location.</p>
+
+        <p><b>The Basic Solution:</b> Physical connection via cables (ethernet, fiber optic) carrying electrical signals
+            or light pulses. We establish a simple code: high voltage = "1", low voltage = "0".</p>
+
+        <p><b>Result:</b> The most basic network—a direct link sending bits between two computers.</p>
+
+        <img src="https://imgs.search.brave.com/_-m_QVYwop-TzSsBdC4p_KE8sh6P0M4feW8fdOPX7Pw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmliZXJtYWxsLmNv/bS9ibG9nL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzA3LzYt/NC5wbmc"
+            height="200px" width="300px" alt="optical fiber">
+
+        <h3>Principle 2: The Problem of Scale</h3>
+
+        <p>Direct connections fail with multiple computers. Three computers need 3 cables, four computers need 6 cables,
+            100 computers would need 4,950 cables.</p>
+
+        <p><b>The Solution:</b> Central device (Switch) where every computer connects to one point. When Computer A
+            wants to talk to Computer C, it sends the message to the switch, which forwards it only to Computer C.</p>
+
+        <p><b>Result:</b> Local Area Network (LAN)—computers in close proximity communicate efficiently.</p>
+
+        <img src="https://imgs.search.brave.com/eTPcDpAYRNWSB4Ogl6Quw36kDQGqrRpTZHMTBNwXeKU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNTA2MTYx/NjQzMjA3MTkwMzEv/bG9jYWxfYXJlYV9u/ZXR3b3JrLndlYnA"
+            alt="Local area network" height="200px" width="300px">
+
+        <h3>Principle 3: Connecting Networks</h3>
+
+        <p>Local networks need to communicate with other local networks across distances.</p>
+
+        <p><b>The Solution:</b> Special computers called Routers that connect to multiple networks and pass messages
+            between them. These devices "route" traffic from one network to another.</p>
+
+        <p><b>Result:</b> The Internet—a "network of networks" connecting millions of private and public local networks
+            through routing devices.</p>
+
+        <img src="https://imgs.search.brave.com/2eryrZU3hbEqLRLCin4_sIiJn6uOkKHR05dJqd61cpc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZWR1Y2JhLmNvbS9h/Y2FkZW15L3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE5LzExL1do/YXQtaXMtUm91dGVy/LTEuanBn"
+            alt="routers" height="200px" width="300px">
+
+        <h3>Principle 4: Finding Anyone (Addressing)</h3>
+
+        <p>In a global web of networks, we need unique addresses for every device to ensure messages reach their
+            destination.</p>
+
+        <p><b>The Solution:</b> IP Address system—unique labels (like 142.250.184.142) assigned to each device. Routers
+            examine destination IP addresses and forward messages to the next best "hop" toward the final destination.
+        </p>
+
+        <p><b>Result:</b> Universal addressing system enabling global device identification and message routing.</p>
+
+        <img src="https://imgs.search.brave.com/GOD40GlgI-rOcNKfH3m0yK4eu2Ggq7a6SyIHuzHJPxk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy5u/b3J0b24uY29tL2Nv/bnRlbnQvZGFtL2Js/b2dzL2ltYWdlcy9u/b3J0b24vYW0vd2hh/dC1pcy1hbi1pcC1h/ZGRyZXNzLTAxLTIw/MjUucG5n"
+            alt="ip address" height="200px" width="300px">
+
+        <h3>Principle 5: Reliability and Fairness</h3>
+
+        <p>Large files sent as single streams create problems: they monopolize connections and become corrupted easily.
+        </p>
+
+        <p><b>The Solution:</b> Break large files into small, numbered packets containing:</p>
+
+        <ul>
+            <li>Small piece of data (payload)</li>
+            <li>Destination IP address</li>
+            <li>Sender's IP address</li>
+            <li>Sequence number for reassembly</li>
+        </ul>
+
+        <p><b>Result:</b> TCP/IP protocol system for reliable, fair data transmission through packet switching.</p>
+
+        <img src="https://imgs.search.brave.com/-81oNsgt-lDEjTX99jwYvabHYvpoYpIx_lLLOl8v1TA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3IvdGNwLWlwLXRy/YW5zbWlzc2lvbi1j/b250cm9sLXByb3Rv/Y29sLWludGVybmV0/LXByb3RvY29sLXZl/Y3Rvci1zdG9jay1p/bGx1c3RyYXRpb25f/MTAwNDU2LTk3NTku/anBnP3NlbXQ9YWlz/X2luY29taW5nJnc9/NzQwJnE9ODA"
+            alt="tcp/ip" height="200px" width="300px">
+
+        <hr>
+
+        <h2>IP Addressing Systems</h2>
+
+        <h3>IPv4 Addresses</h3>
+        <p><strong>Structure:</strong> 32-bit number divided into four 8-bit sections, written as decimal numbers 0-255.
+        </p>
+        <p><strong>Example:</strong> 172.217.16.142 (Google's address)</p>
+        <p><strong>Limitation:</strong> Only 4.3 billion possible addresses (2^32), leading to address scarcity with
+            modern device proliferation.</p>
+
+        <h3>Public vs Private IP Addresses</h3>
+
+        <h4>Public IP Address:</h4>
+        <ul>
+            <li>Globally unique address on the internet</li>
+            <li>Assigned by Internet Service Provider (ISP)</li>
+            <li>Used by servers and routers for internet-facing services</li>
+            <li>Example: Your home router's external address</li>
+        </ul>
+
+        <h4>Private IP Address:</h4>
+        <ul>
+            <li>Local address within private networks only</li>
+            <li>Must be unique only within the local network</li>
+            <li>Assigned by local router</li>
+            <li>Reserved ranges:
+                <ul>
+                    <li>10.0.0.0 to 10.255.255.255 (large corporations)</li>
+                    <li>172.16.0.0 to 172.31.255.255 (medium networks)</li>
+                    <li>192.168.0.0 to 192.168.255.255 (home networks)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>IPv6 Addresses</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Solve IPv4 address exhaustion</li>
+            <li><strong>Structure:</strong> 128-bit address providing 340 undecillion possible addresses (2^128)</li>
+            <li><strong>Format:</strong> Eight groups of four hexadecimal characters separated by colons</li>
+        </ul>
+        <p><strong>Example:</strong> 2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
+
+        <h3>MAC Addresses</h3>
+        <ul>
+            <li><strong>Definition:</strong> Unique, permanent serial number burned into network hardware</li>
+            <li><strong>Structure:</strong> 48-bit number displayed as 12 hexadecimal digits</li>
+            <li><strong>Common formats:</strong>
+                <ul>
+                    <li>Colon-separated: 3C:22:FB:A3:B4:C5</li>
+                    <li>Hyphen-separated: 3C-22-FB-A3-B4-C5</li>
+                    <li>Period-separated: 3c22.fba3.b4c5</li>
+                </ul>
+            </li>
+            <li><strong>Finding MAC Address:</strong>
+                <ul>
+                    <li>Windows: ipconfig /all or getmac /v</li>
+                    <li>macOS: ifconfig</li>
+                </ul>
+            </li>
+        </ul>
+
+        <img src="https://imgs.search.brave.com/K_w8NOKrcl97_itkhb0P1QTqYGpr2XYmFOI7GL3JY3Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibHVl/Y2F0bmV0d29ya3Mu/Y29tLy93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMC8wNS9pcHY0/LWlwdjYuanBn"
+            alt="ipv4&ipv6" height="200px" width="300px">
+
+        <hr>
+
+        <h2>Port Numbers</h2>
+        <p><strong>Definition:</strong> Numerical identifiers (0-65535) that direct network traffic to specific
+            applications or services on a device.</p>
+        <p><strong>Structure:</strong> 16-bit unsigned integer providing 65,536 possible ports</p>
+
+        <h3>Port Categories</h3>
+
+        <h4>Well-Known Ports (0-1023):</h4>
+        <ul>
+            <li>Reserved for standard internet services</li>
+            <li>Require administrator privileges</li>
+            <li>Key examples:
+                <ul>
+                    <li>21: FTP</li>
+                    <li>22: SSH</li>
+                    <li>80: HTTP</li>
+                    <li>443: HTTPS</li>
+                    <li>53: DNS</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Registered Ports (1024-49151):</h4>
+        <ul>
+            <li>For specific applications and services</li>
+            <li>No special privileges required</li>
+            <li>Developer examples:
+                <ul>
+                    <li>3000: React/Node.js development</li>
+                    <li>3306: MySQL</li>
+                    <li>27017: MongoDB</li>
+                    <li>8080: Alternative web server</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Dynamic Ports (49152-65535):</h4>
+        <ul>
+            <li>Temporary, automatic use by client connections</li>
+            <li>Not configured manually</li>
+            <li>Assigned by operating system for outgoing connections</li>
+        </ul>
+
+        <img src="https://imgs.search.brave.com/iAU18YoCmhfm764dsyTho02x6IxufZNxyPzdpmfH0Yc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RhdGlvbngubmV0/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIy/LzEyL1RoZS1SZWdp/c3RlcmVkLVBvcnRz/LVVzZWQtYnktUG9w/dWxhci1TZXJ2aWNl/cy1HcmFwaGljLWJ5/LWF1dGhvci5wbmc"
+            alt="popular port numbers" height="400px" width="400px">
+
+        <hr>
+        
+        <h2>Domain Name System (DNS)</h2>
+        <p><strong>Purpose:</strong> Translate human-friendly domain names into computer-friendly IP addresses.</p>
+
+        <h3>DNS Resolution Process</h3>
+
+        <h4>Step 1: Local Cache Check</h4>
+        <ul>
+            <li>Browser cache (recent visits)</li>
+            <li>Operating system cache</li>
+            <li>Router cache</li>
+            <li>If found, process stops here</li>
+        </ul>
+
+        <h4>Step 2: Recursive Resolver</h4>
+        <ul>
+            <li>Query sent to ISP's DNS server or public resolver (8.8.8.8, 1.1.1.1)</li>
+            <li>Recursive resolver promises to find the complete answer</li>
+        </ul>
+
+        <h4>Step 3: Hierarchical Search</h4>
+        <ul>
+            <li><strong>Root Servers:</strong> Direct to appropriate TLD servers</li>
+            <li><strong>TLD Servers:</strong> Direct to domain's authoritative servers</li>
+            <li><strong>Authoritative Servers:</strong> Provide final IP address</li>
+        </ul>
+
+        <h4>Step 4: Return Journey</h4>
+        <ul>
+            <li>Answer cached at each level with TTL (Time-To-Live)</li>
+            <li>IP address returned to requesting computer</li>
+        </ul>
+
+        <h4>Step 5: Final Connection</h4>
+        <ul>
+            <li>Browser connects directly to IP address</li>
+            <li>DNS process complete</li>
+        </ul>
+
+        <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/54fXQrFHYvhAM7jIIpKEX7/8fb09ba9998d14862e80f5c9cc6d2170/complete-dns-lookup-and-webpage-query.png"
+            alt="DNS Lookup" height="400px" width="600px">
+
+    </main>
+
+    <footer>
+        <h2>Key Terms</h2>
+        <ul>
+            <li><strong>Network:</strong> Connected computers sharing information</li>
+            <li><strong>Router:</strong> Device connecting different networks</li>
+            <li><strong>Switch:</strong> Central device connecting computers in local network</li>
+            <li><strong>Packet:</strong> Small, numbered piece of larger data transmission</li>
+            <li><strong>TCP/IP:</strong> Protocol system for reliable internet communication</li>
+            <li><strong>ISP:</strong> Internet Service Provider supplying internet access</li>
+            <li><strong>TLD:</strong> Top-Level Domain (like .com, .org)</li>
+            <li><strong>TTL:</strong> Time-To-Live, how long DNS records are cached</li>
+            <li><strong>Recursive Resolver:</strong> DNS server that finds complete answers</li>
+            <li><strong>Authoritative Server:</strong> Official source for domain's DNS records</li>
+        </ul>
+
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you explain why direct computer-to-computer connections don't scale?</li>
+            <li>Do you understand the difference between switches and routers?</li>
+            <li>Can you describe what makes the internet a "network of networks"?</li>
+            <li>Do you know the difference between public and private IP addresses?</li>
+            <li>Can you explain why we need both IP addresses and MAC addresses?</li>
+            <li>Do you understand how port numbers direct traffic to specific applications?</li>
+            <li>Can you trace the DNS resolution process from domain name to IP address?</li>
+            <li>Do you know the three categories of port numbers and their purposes?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>

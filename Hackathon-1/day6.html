@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 — HTML Media & Entities</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Embedding videos, audio, and special characters</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>1. The Fundamental Truth</h2>
+        <p>The web needs to deliver any content—not just text and images. HTML5 introduced native media tags to replace insecure plugins like Flash.</p>
+
+        <h2>2. Basic Video Embedding</h2>
+        <p>The <code>&lt;video&gt;</code> tag embeds video files directly into webpages.</p>
+
+        <h3>Simple Video with Controls</h3>
+        <pre><code>&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+
+        <h3>Video with Dimensions and Poster</h3>
+        <pre><code>&lt;video src="video.mp4" width="640" height="360" 
+       poster="images/video-thumbnail.jpg" controls&gt;
+&lt;/video&gt;</code></pre>
+
+        <h3>Example Video Player</h3>
+        <video width="480" height="270" controls poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=480&h=270&fit=crop">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <hr>
+
+        <h2>3. Audio Embedding</h2>
+        <p>The <code>&lt;audio&gt;</code> tag works identically to video but without visual components.</p>
+
+        <h3>Basic Audio Player</h3>
+        <pre><code>&lt;p&gt;Listen to our theme song:&lt;/p&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+
+        <h3>Example Audio Player</h3>
+        <p>Sample audio track:</p>
+        <audio controls>
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+
+        <h2>4. Advanced Video Features</h2>
+
+        <h3>Autoplay (Muted) and Loop</h3>
+        <pre><code>&lt;!-- This will autoplay, but with no sound --&gt;
+&lt;video src="video.mp4" autoplay muted loop controls&gt;&lt;/video&gt;</code></pre>
+
+        <h3>Multiple Source Formats (Professional Method)</h3>
+        <pre><code>&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;</code></pre>
+
+        <hr>
+
+        <h2>5. Accessibility with Subtitles</h2>
+        <p>Use <code>&lt;track&gt;</code> elements to add captions, subtitles, and descriptions.</p>
+
+        <pre><code>&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+
+  &lt;!-- English Captions for hearing impaired --&gt;
+  &lt;track src="captions_en.vtt" kind="captions" 
+         srclang="en" label="English"&gt;
+
+  &lt;!-- Spanish Subtitles for translation --&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" 
+         srclang="es" label="Español"&gt;
+&lt;/video&gt;</code></pre>
+
+        <h3>Track Kinds</h3>
+        <ul>
+            <li><strong>captions:</strong> Direct transcription for hearing-impaired users</li>
+            <li><strong>subtitles:</strong> Translation into another language</li>
+            <li><strong>descriptions:</strong> Audio description for visually impaired users</li>
+        </ul>
+
+        <hr>
+
+        <h2>6. Format Compatibility Comparison</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Browser Compatibility</th>
+                    <th>Flexibility</th>
+                    <th>Simplicity</th>
+                    <th>Best Use Case</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;source&gt; Method</td>
+                    <td>Excellent (multiple formats)</td>
+                    <td>High</td>
+                    <td>More complex</td>
+                    <td>Public websites</td>
+                </tr>
+                <tr>
+                    <td>src Method</td>
+                    <td>Good (single format)</td>
+                    <td>Low</td>
+                    <td>Very simple</td>
+                    <td>Internal projects</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>7. HTML Entities for Special Characters</h2>
+        <p>HTML entities display special characters that browsers might interpret as code.</p>
+
+        <h3>Copyright Symbol Methods</h3>
+        <pre><code>&lt;!-- Method 1: Entity Name (Recommended) --&gt;
+&lt;p&gt;Copyright &amp;copy; 2024 My Website&lt;/p&gt;
+
+&lt;!-- Method 2: Entity Number --&gt;
+&lt;p&gt;Copyright &amp;#169; 2024 My Website&lt;/p&gt;</code></pre>
+
+        <h3>Common HTML Entities</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Description</th>
+                    <th>Entity Name</th>
+                    <th>Entity Number</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&copy;</td>
+                    <td>Copyright</td>
+                    <td>&amp;copy;</td>
+                    <td>&amp;#169;</td>
+                    <td>&copy; 2024</td>
+                </tr>
+                <tr>
+                    <td>&reg;</td>
+                    <td>Registered Trademark</td>
+                    <td>&amp;reg;</td>
+                    <td>&amp;#174;</td>
+                    <td>Brand&reg;</td>
+                </tr>
+                <tr>
+                    <td>&trade;</td>
+                    <td>Trademark</td>
+                    <td>&amp;trade;</td>
+                    <td>&amp;#8482;</td>
+                    <td>Product&trade;</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less-than</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;#60;</td>
+                    <td>&lt;p&gt; tag</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater-than</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;#62;</td>
+                    <td>&lt;/p&gt; tag</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>Ampersand</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;#38;</td>
+                    <td>A &amp; B</td>
+                </tr>
+                <tr>
+                    <td>&quot;</td>
+                    <td>Double Quote</td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;#34;</td>
+                    <td>He said &quot;Hello&quot;</td>
+                </tr>
+                <tr>
+                    <td>&euro;</td>
+                    <td>Euro Sign</td>
+                    <td>&amp;euro;</td>
+                    <td>&amp;#8364;</td>
+                    <td>Price: 50&euro;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Why Use Entities?</h3>
+        <p>Browsers interpret <code>&lt;</code> and <code>&gt;</code> as HTML tags. To display literal code examples, use <code>&amp;lt;</code> and <code>&amp;gt;</code>.</p>
+
+        <h3>Entity Examples in Action</h3>
+        <p>HTML code example: &lt;p&gt;This is a paragraph&lt;/p&gt;</p>
+        <p>Math expression: 5 &lt; 10 &amp; 10 &gt; 3</p>
+        <p>Quote: She said, &quot;Learning HTML is fun!&quot;</p>
+        <p>Footer text: Copyright &copy; 2024 Learning Website&trade;. All rights reserved.</p>
+
+        <hr>
+    </main>
+
+    <footer>
+        <h2>Key Terms</h2>
+        <ul>
+            <li><strong>&lt;video&gt;</strong>: Embeds video files with native browser controls</li>
+            <li><strong>&lt;audio&gt;</strong>: Embeds audio files with playback controls</li>
+            <li><strong>controls</strong>: Enables play/pause/volume/timeline controls</li>
+            <li><strong>&lt;source&gt;</strong>: Provides multiple format options for compatibility</li>
+            <li><strong>&lt;track&gt;</strong>: Adds subtitles, captions, or descriptions</li>
+            <li><strong>poster</strong>: Preview image displayed before video plays</li>
+            <li><strong>HTML Entities</strong>: Special codes for symbols (&amp;copy;, &amp;lt;, etc.)</li>
+            <li><strong>autoplay/muted</strong>: Auto-starts video without sound</li>
+        </ul>
+
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you embed video with controls and poster images?</li>
+            <li>Do you understand the difference between single-source and multi-source methods?</li>
+            <li>Are you able to add audio players to your pages?</li>
+            <li>Can you use track elements for accessibility?</li>
+            <li>Do you know common HTML entities for special characters?</li>
+            <li>Can you display literal HTML code using entities?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>

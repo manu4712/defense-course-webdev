@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 — Nested Lists & Tables</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Deep dive into nested lists and HTML tables</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>1. Nested Lists</h2>
+        <p>Nested lists allow you to create multi-level hierarchies. You can nest <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> inside list items.</p>
+
+        <h3>Example: Company Departments</h3>
+        <ul>
+            <li>Engineering
+                <ul>
+                    <li>Frontend Team
+                        <ul>
+                            <li>React Developers</li>
+                            <li>UI/UX Designers</li>
+                        </ul>
+                    </li>
+                    <li>Backend Team
+                        <ul>
+                            <li>Node.js Developers</li>
+                            <li>Database Administrators</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Marketing
+                <ol>
+                    <li>Content</li>
+                    <li>SEO</li>
+                </ol>
+            </li>
+            <li>Sales</li>
+        </ul>
+
+        <h3>Best Practices</h3>
+        <ul>
+            <li>Keep nesting depth reasonable (2–3 levels max).</li>
+            <li>Use semantic nesting to reflect real hierarchy.</li>
+            <li>Ensure proper indentation in code for readability.</li>
+        </ul>
+
+        <hr>
+
+        <h2>2. HTML Tables</h2>
+        <p>Tables organize tabular data with rows and columns. Use <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.</p>
+
+        <h3>Basic Table Structure</h3>
+        <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header 1&lt;/th&gt;
+      &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Cell 1&lt;/td&gt;
+      &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <h3>Example: Course Schedule</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Day 1</td>
+                    <td>Computer Networks</td>
+                    <td>90 mins</td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>HTML Basics</td>
+                    <td>90 mins</td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>Nested Lists & Tables</td>
+                    <td>120 mins</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Advanced Table Features</h3>
+        <p>You can merge cells across rows or columns using <code>rowspan</code> and <code>colspan</code>.</p>
+        <pre><code>&lt;tr&gt;
+  &lt;td rowspan="2"&gt;Group A&lt;/td&gt;
+  &lt;td&gt;Item 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Item 2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+
+        <h3>Example: Merged Cells</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <th>Group</th>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Fruits</td>
+                <td>Apples</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Oranges</td>
+                <td>8</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <h2>Key Terms</h2>
+        <ul>
+            <li><strong>Nested List:</strong> A list within another list for hierarchical data.</li>
+            <li><strong>Table:</strong> HTML structure for rows and columns of data.</li>
+            <li><strong>&lt;thead&gt; / &lt;tbody&gt;:</strong> Separate header and body sections.</li>
+            <li><strong>&lt;th&gt;:</strong> Table header cell.</li>
+            <li><strong>&lt;td&gt;:</strong> Table data cell.</li>
+            <li><strong>rowspan:</strong> Merge cell vertically.</li>
+            <li><strong>colspan:</strong> Merge cell horizontally.</li>
+        </ul>
+
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you create and indent multi-level lists correctly?</li>
+            <li>Do you know when to use ordered vs unordered nested lists?</li>
+            <li>Can you structure a basic HTML table with header and body?</li>
+            <li>Are you able to apply <code>rowspan</code> and <code>colspan</code>?</li>
+            <li>Do you understand when tables are semantically appropriate?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>

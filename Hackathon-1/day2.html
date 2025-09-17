@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 — HTML Basics</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Learn the fundamentals of HTML</h2>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <h2>Introduction to HyperText Markup Language</h2>
+        <p>HTML stands for HyperText Markup Language—the standard language for creating and structuring web content. It
+            forms the backbone of every website you visit.</p>
+
+        <h3>What is HTML?</h3>
+        <p><strong>HyperText</strong>: The ability to create links connecting web pages, forming the interconnected
+            "web" of information we know today.</p>
+        <p><strong>Markup Language</strong>: Uses "tags" to surround content, giving it meaning and structure. You're
+            essentially "marking up" plain text to tell browsers how to display it.</p>
+        <p><strong>Historical Note</strong>: The first website ever created is still accessible at <a
+                href="https://info.cern.ch/hypertext/WWW/TheProject.html"
+                target="_blank">https://info.cern.ch/hypertext/WWW/TheProject.html</a>—a simple HTML page that started
+            the World Wide Web.</p>
+
+        <h3>Development Setup</h3>
+        <p>Before writing HTML, you need the right tools:</p>
+        <p><strong>Essential Software</strong>:</p>
+        <ul>
+            <li>Visual Studio Code (free code editor from Microsoft)</li>
+            <li>Download from: <a href="https://code.visualstudio.com/"
+                    target="_blank">https://code.visualstudio.com/</a></li>
+        </ul>
+        <p><strong>Recommended Extensions</strong>:</p>
+        <ul>
+            <li>Live Preview: Real-time webpage preview</li>
+            <li>Prettier: Code formatting and cleanup</li>
+            <li>Live Server: Local development server</li>
+        </ul>
+
+        <h3>HTML Document Structure</h3>
+        <p>Every HTML document follows a basic skeleton:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <hr>
+
+        <h2>Core HTML Elements</h2>
+
+        <h3>1. Headings (h1 to h6)</h3>
+        <p>Headings create hierarchical structure and importance levels in your content.</p>
+
+        <h1>Heading 1 - Main Title (Most Important)</h1>
+        <h2>Heading 2 - Major Section</h2>
+        <h3>Heading 3 - Sub-section</h3>
+        <h4>Heading 4 - Sub-sub-section</h4>
+        <h5>Heading 5 - Minor heading</h5>
+        <h6>Heading 6 - Least Important</h6>
+
+        <p><strong>Rules</strong>:</p>
+        <ul>
+            <li>Use only one h1 per page for the main title</li>
+            <li>Follow sequential order—don't skip levels</li>
+            <li>Headings provide structure for search engines and screen readers</li>
+        </ul>
+
+        <h3>2. Paragraphs</h3>
+        <p>The p tag groups related sentences into readable blocks.</p>
+        <p>This is the first paragraph containing related sentences about a topic. Browsers automatically add spacing
+            around paragraphs.</p>
+        <p>This is a separate paragraph. Notice the automatic spacing between this and the previous paragraph.</p>
+        <p><strong>Best Practice</strong>: Use multiple p tags instead of multiple line breaks for better semantic
+            structure.</p>
+
+        <h3>3. Horizontal Rules</h3>
+        <p>The hr tag creates thematic breaks between content sections.</p>
+        <p>This section discusses one topic.</p>
+        <hr>
+        <p>This section covers a completely different topic.</p>
+
+        <h3>4. Line Breaks</h3>
+        <p>The br tag forces text to continue on the next line within the same paragraph.</p>
+        <p>221B Baker Street<br>
+            London, England<br>
+            United Kingdom</p>
+        <p><strong>When to Use</strong>: Addresses, poems, or anywhere you need single line breaks without paragraph
+            spacing.</p>
+
+        <h3>5. Lists</h3>
+        <p>HTML supports both ordered (numbered) and unordered (bulleted) lists.</p>
+
+        <h4>Unordered Lists (bullets):</h4>
+        <ul>
+            <li>Tea Bag</li>
+            <li>Water</li>
+            <li>Sugar</li>
+            <li>Milk</li>
+        </ul>
+
+        <h4>Ordered Lists (numbers):</h4>
+        <ol>
+            <li>First, boil the water in a kettle</li>
+            <li>Add tea bag, sugar and milk into it</li>
+            <li>Keep boiling it for 5 minutes</li>
+            <li>Serve the tea by pouring it into cup</li>
+        </ol>
+        <p><strong>Structure</strong>: Each list item (li) must be nested inside either ul or ol tags.</p>
+
+        <h3>6. Links (Anchor Tags)</h3>
+        <p>Links make the web "hypertext" by connecting pages together.</p>
+        <p>Basic Link: <a href="https://www.coderarmy.in/">Visit Coder Army</a></p>
+        <p>Opens in New Tab: <a href="https://www.example.com" target="_blank">Opens in New Tab</a></p>
+
+        <p><strong>Link Targets</strong>:</p>
+        <ul>
+            <li>target="_self": Opens in same window (default)</li>
+            <li>target="_blank": Opens in new window/tab</li>
+        </ul>
+
+        <h3>7. Images</h3>
+        <p>Images enhance content with visual elements.</p>
+        <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg"
+            alt="Friendly beagle dog sitting in grass" width="300" height="300">
+
+        <p>Example with coding theme:</p>
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+            alt="Computer code displayed on monitor screen" width="400" height="250">
+
+        <p><strong>Required Attributes</strong>:</p>
+        <ul>
+            <li>src: Path or URL to image file</li>
+            <li>alt: Description for accessibility and when images fail to load</li>
+        </ul>
+        <p><strong>Optional Attributes</strong>: width and height to control image dimensions</p>
+
+        <hr>
+
+        <h2>Complete Example Structure</h2>
+        <p>Here's how different elements work together in practice:</p>
+
+        <h3>Shopping List Example</h3>
+        <ul>
+            <li>Fresh vegetables</li>
+            <li>Whole grain bread</li>
+            <li>Organic milk</li>
+            <li>Free-range eggs</li>
+        </ul>
+
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>Preheat oven to 350°F</li>
+            <li>Mix dry ingredients in large bowl</li>
+            <li>Add wet ingredients and stir</li>
+            <li>Bake for 25-30 minutes</li>
+        </ol>
+
+        <h3>Contact Information</h3>
+        <p>Web Development Course<br>
+            123 Learning Street<br>
+            Code City, CC 12345</p>
+
+        <h3>Helpful Resources</h3>
+        <p>Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a>
+            for comprehensive reference.</p>
+
+    </main>
+
+    <footer>
+        <h2>Key Terms</h2>
+        <ul>
+            <li><strong>Element:</strong> Complete HTML component including opening tag, content, and closing tag</li>
+            <li><strong>Tag:</strong> Keywords enclosed in angle brackets that define elements</li>
+            <li><strong>Attribute:</strong> Additional information provided within opening tags</li>
+            <li><strong>Nesting:</strong> Placing elements inside other elements to create hierarchy</li>
+            <li><strong>Semantic HTML:</strong> Using elements based on meaning rather than appearance</li>
+            <li><strong>Self-closing Tag:</strong> Elements that don't contain content (like <code>&lt;img&gt;</code>
+                and <code>&lt;br&gt;</code>)</li>
+            <li><strong>Hyperlink:</strong> Clickable connection to another resource using <code>&lt;a&gt;</code> tags
+            </li>
+            <li><strong>Alt Text:</strong> Description of images for accessibility and when images don't load</li>
+        </ul>
+
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you create a proper HTML document skeleton with DOCTYPE, html, head, and body?</li>
+            <li>Do you understand the hierarchy of <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> headings and when to
+                use each?</li>
+            <li>Can you structure content using paragraphs, line breaks, and horizontal rules appropriately?</li>
+            <li>Are you able to create both ordered and unordered lists with proper nesting?</li>
+            <li>Can you write anchor tags with different target attributes?</li>
+            <li>Do you know how to embed images with proper <code>src</code> and <code>alt</code> attributes?</li>
+            <li>Can you explain the difference between elements, tags, and attributes?</li>
+            <li>Do you understand why semantic HTML structure matters for accessibility?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>

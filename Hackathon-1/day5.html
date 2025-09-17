@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 — HTML Forms</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Building interactive, data-collecting form interfaces</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>1. The Fundamental Truth</h2>
+        <p>Websites must collect user input to enable login, search, purchases, comments, and more. Without forms, the web is read-only.</p>
+
+        <h2>2. The Core HTML Form</h2>
+        <p>The <code>&lt;form&gt;</code> element packages fields and sends data to a server. Use <code>action</code> and <code>method</code> attributes when connecting to backend logic.</p>
+
+        <h3>The Basic Text Input</h3>
+        <pre><code>&lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="firstName" name="firstName"&gt;</code></pre>
+
+        <h3>Connecting Labels</h3>
+        <p>Use <code>id</code> on inputs and matching <code>for</code> on <code>&lt;label&gt;</code> for clickable, accessible form fields.</p>
+
+        <hr>
+
+        <h2>3. Form Submission</h2>
+        <pre><code>&lt;form action="/submit" method="post"&gt;
+  …fields…
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <p>The submit button sends data; wrap fields in <code>&lt;form&gt;</code> for one cohesive submission.</p>
+
+        <hr>
+
+        <h2>4. Field Types & Grouping</h2>
+
+        <h3>Radio Buttons (Single Choice)</h3>
+        <pre><code>&lt;label&gt;T-Shirt Size:&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="sizeS" name="shirtSize" value="small"&gt;
+&lt;label for="sizeS"&gt;Small&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="sizeM" name="shirtSize" value="medium"&gt;
+&lt;label for="sizeM"&gt;Medium&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="sizeL" name="shirtSize" value="large"&gt;
+&lt;label for="sizeL"&gt;Large&lt;/label&gt;</code></pre>
+
+        <h3>Checkboxes (Multiple Choice)</h3>
+        <pre><code>&lt;label&gt;Pizza Toppings:&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="toppingPep" name="toppings" value="pepperoni"&gt;
+&lt;label for="toppingPep"&gt;Pepperoni&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="toppingMush" name="toppings" value="mushrooms"&gt;
+&lt;label for="toppingMush"&gt;Mushrooms&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="toppingOni" name="toppings" value="onions"&gt;
+&lt;label for="toppingOni"&gt;Onions&lt;/label&gt;</code></pre>
+
+        <h3>Textarea (Multi-Line Text)</h3>
+        <pre><code>&lt;label for="comments"&gt;Any special instructions?&lt;/label&gt;&lt;br&gt;
+&lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+
+        <h3>Dropdown Menu</h3>
+        <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;&lt;br&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value=""&gt;--Choose--&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+  &lt;option value="au"&gt;Australia&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+        <hr>
+
+        <h2>5. HTML5 Enhanced Inputs</h2>
+
+        <h3>Password Field</h3>
+        <pre><code>&lt;label for="userPass"&gt;Password:&lt;/label&gt;&lt;br&gt;
+&lt;input type="password" id="userPass" name="userPassword"&gt;</code></pre>
+
+        <h3>Number Field with Range</h3>
+        <pre><code>&lt;label for="userAge"&gt;Age (18–99):&lt;/label&gt;&lt;br&gt;
+&lt;input type="number" id="userAge" name="age" min="18" max="99"&gt;</code></pre>
+
+        <h3>Date Picker</h3>
+        <pre><code>&lt;label for="birthDate"&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;
+&lt;input type="date" id="birthDate" name="dob"&gt;</code></pre>
+
+        <hr>
+
+        <h2>6. Complete Example Form</h2>
+        <form action="/submit" method="post">
+            <fieldset>
+                <legend>Order Form</legend>
+
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName"><br><br>
+
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="lastName"><br><br>
+
+                <label>T-Shirt Size:</label><br>
+                <input type="radio" id="sizeS" name="shirtSize" value="small">
+                <label for="sizeS">Small</label><br>
+                <input type="radio" id="sizeM" name="shirtSize" value="medium">
+                <label for="sizeM">Medium</label><br>
+                <input type="radio" id="sizeL" name="shirtSize" value="large">
+                <label for="sizeL">Large</label><br><br>
+
+                <label>Pizza Toppings:</label><br>
+                <input type="checkbox" id="toppingPep" name="toppings" value="pepperoni">
+                <label for="toppingPep">Pepperoni</label><br>
+                <input type="checkbox" id="toppingMush" name="toppings" value="mushrooms">
+                <label for="toppingMush">Mushrooms</label><br>
+                <input type="checkbox" id="toppingOni" name="toppings" value="onions">
+                <label for="toppingOni">Onions</label><br><br>
+
+                <label for="comments">Any special instructions?</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+                <label for="country">Country:</label><br>
+                <select id="country" name="country">
+                    <option value="">--Choose--</option>
+                    <option value="in">India</option>
+                    <option value="us">USA</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                </select><br><br>
+
+                <label for="userPass">Password:</label><br>
+                <input type="password" id="userPass" name="userPassword"><br><br>
+
+                <label for="userAge">Age (18–99):</label><br>
+                <input type="number" id="userAge" name="age" min="18" max="99"><br><br>
+
+                <label for="birthDate">Date of Birth:</label><br>
+                <input type="date" id="birthDate" name="dob"><br><br>
+
+                <button type="submit"><strong>Submit</strong> Order</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <h2>Key Terms</h2>
+        <ul>
+            <li><strong>&lt;form&gt;</strong>: Container for user-input fields.</li>
+            <li><strong>&lt;label&gt;</strong>: Describes and links to form controls.</li>
+            <li><strong>name</strong>: Data key sent to the server.</li>
+            <li><strong>value</strong>: Data value submitted for inputs.</li>
+            <li><strong>&lt;input&gt;</strong>: Single-line, various types (<code>text</code>, <code>radio</code>, etc.).</li>
+            <li><strong>&lt;textarea&gt;</strong>: Multi-line text input.</li>
+            <li><strong>&lt;select&gt;</strong>: Dropdown for single-choice lists.</li>
+            <li><strong>&lt;button&gt;</strong>: Container button, supports HTML content.</li>
+        </ul>
+
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you connect <code>label</code> and <code>input</code> with <code>for</code>/<code>id</code>?</li>
+            <li>Do you understand grouping rules for <code>radio</code> and <code>checkbox</code>?</li>
+            <li>Can you differentiate <code>name</code> vs <code>id</code> roles?</li>
+            <li>Are you able to use HTML5 input types (<code>date</code>, <code>number</code>, <code>password</code>)?</li>
+            <li>Can you build a complete form with submission?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 — File Paths & HTML Structure</title>
+</head>
+
+<body>
+    <header>
+        <h1>Internet 101 to HTML 101</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a><span> (Information About This Website)</span></li>
+                <li><a href="./cn.html">Day 1</a><span>(Computer Networks (CN))</span></li>
+                <li><a href="./day2.html">Day 2</a><span>(HTML Basics)</span></li>
+                <li><a href="./day3.html">Day 3</a><span>(Nested Lists & Tables)</span></li>
+                <li><a href="./day4.html">Day 4</a><span>(File Paths & Structure)</span></li>
+                <li><a href="./day5.html">Day 5</a><span>(HTML Forms)</span></li>
+                <li><a href="./day6.html">Day 6</a><span>(HTML Media & Entities)</span></li>
+            </ul>
+        </nav>
+        <h2>Understanding file paths, boilerplate, and containers</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>1. File Path System</h2>
+
+        <h3>Step 1: The Fundamental Truth</h3>
+        <p>A website is not one single file but a collection of HTML, CSS, JavaScript, images, videos, and fonts
+            organized into folders.</p>
+
+        <h3>Step 2: The Core Problem</h3>
+        <p>How does <code>index.html</code> tell the browser where to find <code>logo.png</code>? The browser needs an
+            exact address: a file path.</p>
+
+        <h4>A) Relative File Paths</h4>
+        <pre><code>my-website/
+├── index.html
+├── about.html
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+└── pages/
+    ├── contact.html
+    └── terms.html
+</code></pre>
+
+        <h5>Scenario 1: Same Folder</h5>
+        <pre><code>
+&lt;!-- inside index.html --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+</code></pre>
+
+        <h5>Scenario 2: Sub-Folder (Down)</h5>
+        <pre><code>
+&lt;!-- inside index.html --&gt;
+&lt;img src="images/logo.png" alt="My Website Logo"&gt;
+</code></pre>
+
+        <h5>Scenario 3: Parent Folder (Up)</h5>
+        <pre><code>
+&lt;!-- inside pages/contact.html --&gt;
+&lt;img src="../images/logo.png" alt="My Website Logo"&gt;
+</code></pre>
+
+        <h4>B) Absolute File Paths</h4>
+        <p>Full URLs starting with <code>http://</code> or <code>https://</code> for resources not on your own site.</p>
+        <pre><code>
+&lt;!-- external link --&gt;
+&lt;a href="https://www.google.com"&gt;Search&lt;/a&gt;
+
+&lt;!-- external image --&gt;
+&lt;img src="https://upload.wikimedia.org/…/html5_logo.svg" alt="HTML5 Logo"&gt;
+</code></pre>
+
+        <h3>Security “Why”</h3>
+        <p>Browsers sandbox code. Allowing local absolute paths would expose private files. Relative paths work
+            anywhere.</p>
+
+        <hr>
+
+        <h2>2. HTML Boilerplate</h2>
+        <p>Boilerplate gives the browser essential setup information before rendering content.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h5>Why Each Line Matters</h5>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Triggers standards mode.</li>
+            <li><code>&lt;html lang="en"&gt;</code>: Declares page language for SEO and accessibility.</li>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code>: Ensures proper character encoding.</li>
+            <li><code>&lt;meta name="viewport"&gt;</code>: Enables responsive mobile rendering.</li>
+            <li><code>&lt;title&gt;</code>: Sets the tab title and bookmark name.</li>
+        </ul>
+
+        <hr>
+
+        <h2>3. Containers & Labels</h2>
+
+        <h3><code>&lt;div&gt;</code> — The Generic Box</h3>
+        <p>A meaningless container to group elements into a single box you can style.</p>
+        <pre><code>&lt;div&gt;
+    &lt;img src="avatar.png"&gt;
+    &lt;h2&gt;User Name&lt;/h2&gt;
+    &lt;p&gt;Bio text.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3><code>class</code> &amp; <code>id</code> — Labels for Boxes</h3>
+        <p><code>id</code> targets one unique element; <code>class</code> groups multiple elements.</p>
+        <pre><code>&lt;div id="header"&gt;…&lt;/div&gt;
+&lt;div class="card"&gt;…&lt;/div&gt;
+&lt;div class="card"&gt;…&lt;/div&gt;</code></pre>
+
+        <h3><code>&lt;span&gt;</code> — The Inline Highlighter</h3>
+        <p>An inline container for styling text without breaking flow.</p>
+        <pre><code>&lt;p&gt;This is &lt;span class="highlight"&gt;important&lt;/span&gt; text.&lt;/p&gt;</code></pre>
+
+        <hr>
+
+        <h2>4. Semantic Structure Tags</h2>
+        <p>Use semantic containers for meaningful sections:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code>: Intro or navigation area.</li>
+            <li><code>&lt;main&gt;</code>: Unique page content (one per page).</li>
+            <li><code>&lt;footer&gt;</code>: Closing content (copyright, links).</li>
+        </ul>
+    </main>
+
+    <footer>
+        <h2>Revision Checklist</h2>
+        <ul>
+            <li>Can you write and distinguish relative vs absolute paths?</li>
+            <li>Do you understand each part of the HTML5 boilerplate?</li>
+            <li>Can you group elements with <code>div</code> and target them with <code>class</code>/<code>id</code>?
+            </li>
+            <li>Are you able to highlight inline text with <code>span</code>?</li>
+            <li>Do you know when to use <code>header</code>, <code>main</code>, and <code>footer</code>?</li>
+        </ul>
+        <p>&copy; Internet 101 to HTML 101</p>
+    </footer>
+</body>
+
+</html>
