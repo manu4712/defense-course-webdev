@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  animation-name: circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+@keyframes circle {
+  0% {
+    box-shadow: 0 0 20px 10px orangered;
+    top: 20px;
+    left: 0vw;
+  }
+  25% {
+    box-shadow: 0 0 20px 10px orangered;
+    top: 20px;
+    left: 90vw;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px orangered;
+    left: 90vw;
+    top: 80vh;
+  }
+  75% {
+    box-shadow: 0 0 20px 10px orangered;
+    top: 80vh;
+    left: 0vw;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px orangered;
+    top: 20px;
+    left: 0vw;
+  }
+
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.marquee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width:80vw;
+    font-size: 40px;
+    background-color: #1a1a1a;
+    border: 3px solid #1a1a1a;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+p{
+    animation-name: marq;
+    animation-duration: 7s;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    animation-timing-function: linear;
+}
+
+@keyframes marq {
+    from{
+        margin-left: 100vw;
+    }
+    to{
+        margin-left: -120vw;
+    }
+}
