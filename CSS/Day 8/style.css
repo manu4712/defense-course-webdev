@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 1px solid white;
+  height: 45vw;
+  width: 45vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  border: 1px solid white;
+  height: 40vw;
+  width: 40vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  border: 1px solid white;
+  height: 35vw;
+  width: 35vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box3 {
+  border: 1px solid white;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box4 {
+  border: 1px solid white;
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box5 {
+  border: 1px solid white;
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box6 {
+  border: 1px solid white;
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box7 {
+  border: 1px solid white;
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  height: 5vw;
+  width: 5vw;
+  background-color: orange;
+  box-shadow: 0 0 10px 10px orangered;
+  border-radius: 50%;
+  position: relative;
+}
+
+.orbiter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: center center;
+  animation: spin linear infinite;
+}
+
+.orbiter--mercury {
+  animation-duration: 0.45s;
+}
+.orbiter--venus {
+  animation-duration: 1.125s;
+}
+.orbiter--earth {
+  animation-duration: 1.825s;
+}
+.orbiter--mars {
+  animation-duration: 3.435s;
+}
+.orbiter--jupiter {
+  animation-duration: 5.93s;
+}
+.orbiter--saturn {
+  animation-duration: 14.75s;
+}
+.orbiter--uranus {
+  animation-duration: 42s;
+}
+.orbiter--neptune {
+  animation-duration: 82.5s;
+}
+
+.planet {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mercury {
+  transform: translateX(4vw);
+  width: 2vw;
+  height: 2vw;
+}
+.venus {
+  transform: translateX(6.5vw);
+  width: 2vw;
+  height: 2vw;
+}
+
+.earth {
+  transform: translateX(9vw);
+  width: 2vw;
+  height: 2vw;
+}
+
+.mars {
+  transform: translateX(11.5vw);
+  width: 2vw;
+  height: 2vw;
+}
+
+.jupiter {
+  transform: translateX(14vw);
+  width: 2vw;
+  height: 2vw;
+}
+.saturn {
+  transform: translateX(16.5vw);
+  width: 2vw;
+  height: 2vw;
+}
+.uranus {
+  transform: translateX(19vw);
+  width: 2vw;
+  height: 2vw;
+}
+.neptune {
+  transform: translateX(21.5vw);
+  width: 2vw;
+  height: 2vw;
+}
+.planet img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
