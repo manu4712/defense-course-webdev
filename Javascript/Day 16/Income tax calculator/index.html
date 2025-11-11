@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income tax calculator</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flex-container input {
+            padding: 5px 20px;
+            font-size: 1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .flex-container button {
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: chartreuse;
+            border-radius: 10px;
+            padding: 5px 20px;
+            border: none;
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <h1>Income Tax Calculator</h1>
+        <form action="" class="flex-container">
+            <label for="income">Income</label>
+            <input type="number" name="userIncome" id="income" placeholder="Enter your income">
+            <button type="submit">Calculate Income</button>
+        </form>
+        <h2>Total Tax:</h2>
+    </div>
+</body>
+
+</html>

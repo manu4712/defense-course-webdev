@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            position: relative;
+            height: 100vh;
+        }
+
+        .bubble {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            border-radius: 50%;
+            animation: grow 5s forwards;
+            overflow: hidden;
+        }
+
+        @keyframes grow {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+                font-size: 16px;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+                font-size: 25px;
+            }
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+</body>
+
+</html>

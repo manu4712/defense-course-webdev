@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            height: 30vh;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: #1a1a1a;
+            border: 1px solid orangered;
+            border-radius: 10px;
+            color: orange;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flex-container p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <h2>Olympics 2028 Count down</h2>
+    <div class="flex-container">
+        <div id="year" class="box"></div>
+        <p>Years</p>
+        <div id="month" class="box"></div>
+        <p>Months</p>
+        <div id="day" class="box"></div>
+        <p>Days</p>
+        <div id="hour" class="box"></div>
+        <p>Hours</p>
+        <div id="minute" class="box"></div>
+        <p>Minutes</p>
+        <div id="second" class="box"></div>
+        <p>Seconds</p>
+        <div id="millisecond" class="box"></div>
+        <p>Milliseconds</p>
+    </div>
+</body>
+
+</html>

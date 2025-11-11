@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            border: 1px solid plum;
+            padding: 1rem;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            transition: all 0.8s;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .container:hover {
+            box-shadow: 0px 0px 50px 1px rebeccapurple;
+        }
+
+        #form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 50%;
+        }
+
+        input {
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input[type="submit"] {
+            background-color: rebeccapurple;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.8s;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(139, 38, 239);
+        }
+        #result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            background: #0d0d0d;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 50%;
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form-container">
+            <h1>Astrology Insights</h1>
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="day">Date of Birth (Day):</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+
+            <label for="month">Month:</label>
+            <input type="number" id="month" name="month" min="1" max="12" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" min="1900" max="2025" required>
+
+            <input type="submit" value="Get Insights">
+        </form>
+        <hr>
+        <div id="result">
+        </div>
+    </div>
+</body>
+
+</html>

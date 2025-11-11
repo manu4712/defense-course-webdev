@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            height: 30vh;
+            font-size: 1.3rem;
+        }
+
+        form input {
+            padding: 7px 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: large;
+            background-color: crimson;
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <h1>Love Calculator</h1>
+    <form action="">
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" name="yourName" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div>
+            <label for="crush-name">Crush's Name:</label>
+            <input type="text" name="crushName" id="crush-name" placeholder="Enter your crush's name" required>
+        </div>
+
+        <div>
+            <button>Calculate</button>
+        </div>
+    </form>
+    <h2>Result:</h2>
+</body>
+
+</html>

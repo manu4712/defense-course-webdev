@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-size: large; */
+  background-color: black;
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  height: 90vh;
+}
+
+img {
+  max-width: 400px;
+  transition: all 1s;
+}
+
+h2 {
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: aqua;
+  color: #1a1a1a;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+.item-1,
+.item-3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item-2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.game-board {
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.game-board div {
+  border: 1px solid;
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  transition: all 1s;
+}
+
+.game-board div:hover {
+  cursor: pointer;
+  background-color: rgb(73, 73, 73);
+}
+
+.res {
+  color: greenyellow;
+  text-align: center;
+  font-size: 2rem;
+}
+
+button{
+  background-color: aquamarine;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: large;
+}
+
+.button{
+  text-align: center;
+}
