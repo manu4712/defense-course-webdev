@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-color: #000000;
+}
+header{
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+main div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+main img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
